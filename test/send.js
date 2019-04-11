@@ -1,5 +1,4 @@
-
-var request = require("request");
+require("isomorphic-fetch");
 var qs = require("querystring");
 var uuid = require("uuid");
 var should = require("should");
@@ -17,7 +16,7 @@ describe("ua", function () {
 		var post;
 
 		beforeEach(function () {
-			post = sinon.stub(request, "post").callsArg(2);
+			post = sinon.stub(global, "fetch").resolves(null);
 		});
 
 		afterEach(function () {

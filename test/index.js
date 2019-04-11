@@ -1,5 +1,3 @@
-
-var request = require("request");
 var qs = require("querystring");
 var uuid = require("uuid");
 var should = require("should");
